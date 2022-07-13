@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+   <ul>
+     {% for i in range(1,11) %}
+      <li> Avaliação do Cliente {{i}}</ul>
+     {% endfor %}
+ <ul>
+   
+ <ul>
+   {% for i in clientes %}
+     <li>
+       Avaliação de {{i.nome}} -
+       Nota:
+       {% for n in range(i.nota) %}
+          <img src = " static/estrela.png"
+            width= "20px">
+                    {% endfor %}
+     </li>
+   {% endfor %}
+ </ul>
+   {% endblock %}
+   
+
+
+
+
+
